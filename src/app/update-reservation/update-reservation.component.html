@@ -1,0 +1,39 @@
+<div class="container">
+    <div>
+    <h2>Modifier Ticket :</h2>
+    </div>
+    <form >
+    <div  class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID TICKET</label>
+    <input  readonly type="number" [(ngModel)]="currentTicket.id"
+    name="id" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom CLIENT</label>
+    <input type="text"[(ngModel)]= "currentTicket.nomClient"
+    name="nomClient" class="form-control">
+    </div>
+    
+    
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Prix</label>
+        <input type="number"[(ngModel)]= "currentTicket.prix"
+    name="prix" class="form-control">
+</div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Code Paiement</label>
+        <input type="number"[(ngModel)]= "currentTicket.codePaiement"
+    name="codePaiement" class="form-control">
+        
+        
+        </div>
+    <div class="mt-2">
+    <button type="submit" (click)="updateTicket()" class="btn btn-success">Modifer</button>
+    </div>
+    <div class="mt-2">
+
+    <button  class="btn btn-success" [routerLink]="['/printTicket',currentTicket.id]">Print</button>
+   </div> 
+    </form>
+    </div>
+    
