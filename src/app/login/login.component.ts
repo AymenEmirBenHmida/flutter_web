@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.user).subscribe((data)=> {
       let jwToken = data.headers.get('Authorization');
       this.authService.saveToken(jwToken);
-      this.router.navigate(['/']);              
+      this.router.navigate(['/chart']);              
     },(err)=>{   this.err = 1;
 });
 
